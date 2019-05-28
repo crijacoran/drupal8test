@@ -1,0 +1,43 @@
+name: instride
+recipe: drupal8
+config:
+  php: '7.2'
+  webroot: web
+services:
+  appserver:
+    build:
+      - composer install
+      - vendor/squizlabs/php_codesniffer/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
+      - cp scripts/git/hooks/pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+  node:
+    type: node
+    build:
+      - npm install
+    globals:
+      gulp-cli: latest
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
+  setup:
+    description: Set up drupal
+    cmd:
+      - cp -n scripts/lando/settings/settings.local.php web/sites/default/
+      - cd $LANDO_WEBROOT && drush si minimal --locale='en' --site-name='InStride' --site-mail='tarun.malhotra@instride.com' --account-name='admin' --account-mail='tarun.malhotra@instride.com' --account-pass='admin' --existing-config -y
+    service: appserver
+  update:
+    description: Update Application
+    cmd:
+      - composer install
+      - cd $LANDO_WEBROOT && drupal updb
+      - cd $LANDO_WEBROOT && drush cim -y
+      - cd $LANDO_WEBROOT && drush cr
+    service: appserver
+  phpcs:
+    service: appserver
+    cmd:
+      - /app/vendor/squizlabs/php_codesniffer/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md
+    description: Run phpcs for given folder or file.
