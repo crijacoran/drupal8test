@@ -1,0 +1,9 @@
+uuid: 83281da3-8700-4e9f-b7ca-51a24aba2883
+langcode: en
+status: true
+dependencies: {  }
+id: support_item
+label: 'Support item'
+icon_uuid: null
+description: 'Support item.'
+behavior_plugins: {  }

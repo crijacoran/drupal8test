@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Contains instride_core.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function instride_core_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the instride_core module.
+    case 'help.page.instride_core':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Instride general utilities.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function instride_core_entity_presave(EntityInterface $entity) {
+  switch ($entity->bundle()) {
+    // Here you modify only your landing_page content type.
+    case 'landing_page':
+      // Setting the path alias value with the field_domain.
+      $path = substr($entity->field_path->value, 0, 1) === '/' ? $entity->field_path->value : '/' . $entity->field_path->value;
+      $entity->set('path', ['alias' => $path]);
+      $entity->set('field_path', $path);
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function instride_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  if ($form_id == 'node_landing_page_edit_form' || $form_id == 'node_landing_page_form') {
+    unset($form['path']);
+  }
+}

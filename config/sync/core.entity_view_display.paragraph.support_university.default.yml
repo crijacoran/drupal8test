@@ -1,0 +1,24 @@
+uuid: 7867bbd1-6ef7-439d-98e3-80bade48f644
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.support_university.field_support_at_university
+    - paragraphs.paragraphs_type.support_university
+  module:
+    - entity_reference_revisions
+id: paragraph.support_university.default
+targetEntityType: paragraph
+bundle: support_university
+mode: default
+content:
+  field_support_at_university:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

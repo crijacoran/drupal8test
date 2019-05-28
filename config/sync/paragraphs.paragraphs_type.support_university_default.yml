@@ -1,0 +1,9 @@
+uuid: a8785069-d2ba-444b-ae5d-c35ec7f05bea
+langcode: en
+status: true
+dependencies: {  }
+id: support_university_default
+label: 'Support University default'
+icon_uuid: null
+description: 'Support at university type "Default".'
+behavior_plugins: {  }

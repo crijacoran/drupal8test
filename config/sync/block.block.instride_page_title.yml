@@ -1,0 +1,20 @@
+uuid: 72022a6c-db21-4222-abb7-13f904e5b2e3
+langcode: en
+status: false
+dependencies:
+  theme:
+    - instride
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: instride_page_title
+theme: instride
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

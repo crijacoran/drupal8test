@@ -1,0 +1,118 @@
+//  Slider styles.
+
+.ins-slider-university {
+  @include reset-list;
+
+  .paragraph--type--support-item {
+    padding: 0 40px;
+    position: relative;
+
+    @media #{$mobile} {
+      padding: 0 10px;
+    }
+
+    &::after {
+      background-color: $ins-gray-custom;
+      content: '';
+      display: block;
+      height: 100px;
+      position: absolute;
+      right: 0;
+      top: calc(50% - 50px);
+      width: 1px;
+
+    }
+  }
+
+  .field--name-field-image {
+    img {
+      margin-bottom: 17px;
+    }
+  }
+
+  .field--name-field-title {
+    display: inline-block;
+    font-family: 'roboto';
+    font-size: 48px;
+    font-weight: 900;
+    padding-bottom: 30px;
+
+    @media #{$mobile} {
+      font-size: 36px;
+    }
+
+    &::after {
+      background-color: $ins-yellow;
+      bottom: 23px;
+      content: '';
+      display: block;
+      height: 14px;
+      position: relative;
+      z-index: -1;
+    }
+  }
+
+  .carousel {
+    .slick-slider {
+      width: calc(100% - 1px);
+
+      .field--name-field-title {
+        font-family: 'roboto';
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 10px;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .slick-arrow {
+        // sass-lint:disable-all
+        display: none !important;
+        // sass-lint:enable-all
+      }
+
+      .slick-dots {
+        list-style: none;
+        padding-top: 20px;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin-right: 10px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:only-child {
+            display: none;
+          }
+
+          button {
+            // sass-lint:disable-all
+            background-color: rgba(123, 123, 123, .2);
+            // sass-lint:enable-all
+            border: 0;
+            border-radius: 5px;
+            font-size: 0;
+            height: 10px;
+            padding: 0;
+            width: 10px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          &.slick-active {
+            button {
+              background-color: $ins-black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+uuid: 9be8cde5-bc58-435e-8de6-c137f1a33fc3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - instride
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: instride_local_actions
+theme: instride
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

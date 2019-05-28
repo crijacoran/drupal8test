@@ -1,0 +1,9 @@
+uuid: feafaf26-256c-41e8-bfd3-ad0441617124
+langcode: en
+status: true
+dependencies: {  }
+id: hero_default
+label: 'Hero default'
+icon_uuid: null
+description: 'Hero type "default".'
+behavior_plugins: {  }

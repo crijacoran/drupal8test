@@ -1,0 +1,21 @@
+uuid: 9b828326-004f-464b-898b-9fca1d9f8733
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_item_description
+    - paragraphs.paragraphs_type.item_label_content
+  module:
+    - text
+id: paragraph.item_label_content.field_item_description
+field_name: field_item_description
+entity_type: paragraph
+bundle: item_label_content
+label: 'Item description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

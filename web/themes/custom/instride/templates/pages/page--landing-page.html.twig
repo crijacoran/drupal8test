@@ -1,0 +1,14 @@
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+
+{# Main #}
+{% block main %}
+    <div class="main-container {{ container }} js-quickedit-main-content" role="main">
+        <section>
+            {# Content #}
+            {% block content %}
+                <a id="main-content"></a>
+                {{ page.content }}
+            {% endblock %}
+        </section>
+    </div>
+{% endblock %}

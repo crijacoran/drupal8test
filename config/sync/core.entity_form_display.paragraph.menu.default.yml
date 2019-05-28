@@ -1,0 +1,29 @@
+uuid: cef4cedd-ebb2-410d-97cb-201348ba2508
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.menu.field_menu_item
+    - paragraphs.paragraphs_type.menu
+  module:
+    - paragraphs
+id: paragraph.menu.default
+targetEntityType: paragraph
+bundle: menu
+mode: default
+content:
+  field_menu_item:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: menu_item
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

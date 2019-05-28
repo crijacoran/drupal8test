@@ -1,0 +1,9 @@
+uuid: ac0102de-43b0-40b9-88e6-cf7ead9bd126
+langcode: en
+status: true
+dependencies: {  }
+id: header
+label: Header
+icon_uuid: null
+description: 'Header section.'
+behavior_plugins: {  }

@@ -1,0 +1,29 @@
+uuid: 5387bacd-b394-4318-bc72-007dd84495ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_hero
+    - paragraphs.paragraphs_type.hero
+  module:
+    - paragraphs
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_hero:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

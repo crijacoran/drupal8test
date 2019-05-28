@@ -1,0 +1,34 @@
+uuid: e42d8a8e-575c-4da9-a2a6-f8457cee6401
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.item_label_content.field_item_description
+    - field.field.paragraph.item_label_content.field_title
+    - paragraphs.paragraphs_type.item_label_content
+  module:
+    - text
+id: paragraph.item_label_content.default
+targetEntityType: paragraph
+bundle: item_label_content
+mode: default
+content:
+  field_item_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

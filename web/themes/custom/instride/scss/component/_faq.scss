@@ -1,0 +1,85 @@
+// FAQs styling.
+
+$ins-white: #fff;
+
+.ins-faqs {
+  @include reset-list;
+
+  .field--name-field-title {
+    font-family: roboto;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 25px;
+  }
+
+  .panel-default {
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    border-top: 0;
+    box-shadow: none;
+
+    &:first-child {
+      border-top: solid 1px #ddd;
+    }
+
+    .panel-heading {
+      background-color: $ins-white;
+      border-color: transparent;
+      border-radius: 0;
+
+      &+.panel-collapse {
+        >.panel-body {
+          border-top-color: transparent;
+        }
+      }
+
+      .panel-title {
+        font-weight: bold;
+        padding: 0;
+
+        a {
+          cursor: pointer;
+          display: block;
+          font-family: roboto;
+          padding: 10px 15px;
+          position: relative;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &::after {
+            border-color: $ins-gray transparent transparent;
+            border-style: solid;
+            border-width: 5px 5px 0;
+            content: '';
+            height: 0;
+            position: absolute;
+            right: 8px;
+            top: calc(50% - 4px);
+            width: 0;
+          }
+
+          &.collapsed {
+            &::after {
+              border-color: transparent transparent transparent $ins-gray;
+              border-width: 5px 0 5px 5px;
+              right: 10px;
+              top: calc(50% - 6px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .panel-group {
+    .panel {
+      &+.panel {
+        margin-top: 0;
+      }
+    }
+  }
+}

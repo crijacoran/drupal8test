@@ -1,0 +1,24 @@
+uuid: 4c347b35-a09c-4a3c-90d5-a010ece5ab8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_s.field_faq_s
+    - paragraphs.paragraphs_type.faq_s
+  module:
+    - entity_reference_revisions
+id: paragraph.faq_s.default
+targetEntityType: paragraph
+bundle: faq_s
+mode: default
+content:
+  field_faq_s:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

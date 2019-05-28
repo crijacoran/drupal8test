@@ -1,0 +1,29 @@
+uuid: 51b5282b-908d-48bf-bea1-a999a152334c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header.field_header_types
+    - paragraphs.paragraphs_type.header
+  module:
+    - paragraphs
+id: paragraph.header.default
+targetEntityType: paragraph
+bundle: header
+mode: default
+content:
+  field_header_types:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

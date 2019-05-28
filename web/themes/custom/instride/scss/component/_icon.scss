@@ -1,0 +1,55 @@
+//  Icon styles.
+
+a {
+
+  &.icon-before {
+    .glyphicon {
+      margin-right: .25em;
+    }
+  }
+
+  .glyphicon {
+    &.icon-before {
+      margin-right: .25em;
+    }
+
+    &.icon-after {
+      margin-left: .25em;
+    }
+  }
+
+  &.icon-after {
+    .glyphicon {
+      margin-left: .25em;
+    }
+  }
+}
+
+.btn {
+
+  &.icon-before {
+    .glyphicon {
+      margin-left: -.25em;
+      margin-right: .25em;
+    }
+  }
+
+  .glyphicon {
+    &.icon-before {
+      margin-left: -.25em;
+      margin-right: .25em;
+    }
+
+    &.icon-after {
+      margin-left: .25em;
+      margin-right: -.25em;
+    }
+  }
+
+  &.icon-after {
+    .glyphicon {
+      margin-left: .25em;
+      margin-right: -.25em;
+    }
+  }
+}

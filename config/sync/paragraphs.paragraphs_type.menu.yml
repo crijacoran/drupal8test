@@ -1,0 +1,9 @@
+uuid: a6753a8b-1f28-46b6-be93-b5550a107192
+langcode: en
+status: true
+dependencies: {  }
+id: menu
+label: Menu
+icon_uuid: null
+description: 'Menu items group.'
+behavior_plugins: {  }

@@ -1,0 +1,47 @@
+uuid: 04f23cb1-22d9-4a6f-9e2c-34458e16e5c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_default.field_faqs_group
+    - field.field.paragraph.faq_default.field_id
+    - field.field.paragraph.faq_default.field_title
+    - paragraphs.paragraphs_type.faq_default
+  module:
+    - paragraphs
+id: paragraph.faq_default.default
+targetEntityType: paragraph
+bundle: faq_default
+mode: default
+content:
+  field_faqs_group:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: item_label_content
+    third_party_settings: {  }
+    region: content
+  field_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

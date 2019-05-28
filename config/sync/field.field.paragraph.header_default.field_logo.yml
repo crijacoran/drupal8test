@@ -1,0 +1,38 @@
+uuid: bc8176ae-847a-4b7b-bf98-88b52c639d4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_logo
+    - paragraphs.paragraphs_type.header_default
+  module:
+    - image
+id: paragraph.header_default.field_logo
+field_name: field_logo
+entity_type: paragraph
+bundle: header_default
+label: Logo
+description: 'Recommended image size: 473px x 65px'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,62 @@
+//  Hero banner styling.
+
+
+//Hero module
+.ins-hero {
+  @include reset-list;
+  padding: 0;
+  position: relative;
+  z-index: -1;
+
+  .img-responsive {
+    margin: 0 auto;
+  }
+
+  .ins-hero-text-container {
+    bottom: 0;
+    padding-bottom: 58px;
+    position: absolute;
+
+    .field--name-field-subtitle {
+      color: $ins-yellow;
+      font-family: 'Roboto', sans-serif;
+      font-size: 36px;
+      line-height: normal;
+      max-height: 129px;
+      overflow-y: hidden;
+      padding: 0 50px;
+
+      @media #{$mobile} {
+        display: none;
+      }
+
+      @media #{$wide} {
+        font-weight: 900;
+        max-width: 64%;
+      }
+    }
+
+    .field--name-field-title {
+      color: $ins-white;
+      font-family: 'Roboto', sans-serif;
+      line-height: normal;
+      max-height: 216px;
+      overflow-y: hidden;
+      padding: 0 50px;
+
+      @media #{$mobile} {
+        display: none;
+      }
+
+      @media #{$tablet} {
+        font-size: 40px;
+      }
+
+      @media #{$wide} {
+        font-size: 60px;
+        font-weight: 900;
+        max-width: 64%;
+      }
+    }
+  }
+}

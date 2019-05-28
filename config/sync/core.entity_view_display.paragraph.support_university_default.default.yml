@@ -1,0 +1,35 @@
+uuid: 7ec67da7-5952-4098-be8d-7ef39fb96d52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.support_university_default.field_id
+    - field.field.paragraph.support_university_default.field_support_items
+    - field.field.paragraph.support_university_default.field_title
+    - paragraphs.paragraphs_type.support_university_default
+  module:
+    - entity_reference_revisions
+id: paragraph.support_university_default.default
+targetEntityType: paragraph
+bundle: support_university_default
+mode: default
+content:
+  field_support_items:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_id: true

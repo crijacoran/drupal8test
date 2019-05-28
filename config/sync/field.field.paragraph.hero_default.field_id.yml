@@ -1,0 +1,19 @@
+uuid: aa216bc9-2385-476e-82fe-f50e7ec8b61b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id
+    - paragraphs.paragraphs_type.hero_default
+id: paragraph.hero_default.field_id
+field_name: field_id
+entity_type: paragraph
+bundle: hero_default
+label: Id
+description: 'The anchor used for each link in the menu'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

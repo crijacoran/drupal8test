@@ -1,0 +1,43 @@
+uuid: bf4f840c-4d42-487f-a565-813783d53199
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu
+    - paragraphs.paragraphs_type.header_default
+    - paragraphs.paragraphs_type.menu
+  module:
+    - entity_reference_revisions
+id: paragraph.header_default.field_menu
+field_name: field_menu
+entity_type: paragraph
+bundle: header_default
+label: Menu
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      menu: menu
+    target_bundles_drag_drop:
+      header:
+        weight: 6
+        enabled: false
+      header_default:
+        weight: 7
+        enabled: false
+      menu:
+        enabled: true
+        weight: 8
+      menu_item:
+        weight: 9
+        enabled: false
+      sections:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

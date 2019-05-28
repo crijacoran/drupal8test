@@ -1,0 +1,24 @@
+uuid: 6ebcce3e-e986-47c1-8620-ac7546242aa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_hero
+    - paragraphs.paragraphs_type.hero
+  module:
+    - entity_reference_revisions
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

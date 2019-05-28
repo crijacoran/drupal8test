@@ -1,0 +1,9 @@
+uuid: c15ba521-1452-4157-858b-e48ad820274c
+langcode: en
+status: true
+dependencies: {  }
+id: header_default
+label: 'Header default'
+icon_uuid: null
+description: 'Header type "default".'
+behavior_plugins: {  }

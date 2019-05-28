@@ -1,0 +1,47 @@
+uuid: 23bf05d9-73cd-4e62-932f-c044425e560f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.support_university_default.field_id
+    - field.field.paragraph.support_university_default.field_support_items
+    - field.field.paragraph.support_university_default.field_title
+    - paragraphs.paragraphs_type.support_university_default
+  module:
+    - paragraphs
+id: paragraph.support_university_default.default
+targetEntityType: paragraph
+bundle: support_university_default
+mode: default
+content:
+  field_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_support_items:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: support_item
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

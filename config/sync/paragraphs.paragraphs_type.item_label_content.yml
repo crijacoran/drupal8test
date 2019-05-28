@@ -1,0 +1,9 @@
+uuid: 149c2ebc-ec47-44ec-9ec4-8b1fad9a8147
+langcode: en
+status: true
+dependencies: {  }
+id: item_label_content
+label: Item
+icon_uuid: null
+description: 'Wildcard paragraph, contains a text and a rich_text fields.'
+behavior_plugins: {  }

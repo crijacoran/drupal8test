@@ -1,0 +1,49 @@
+uuid: df445b0f-d448-44b4-86e2-309efdfa9129
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header_types
+    - paragraphs.paragraphs_type.header
+    - paragraphs.paragraphs_type.header_default
+  module:
+    - entity_reference_revisions
+id: paragraph.header.field_header_types
+field_name: field_header_types
+entity_type: paragraph
+bundle: header
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      header_default: header_default
+    target_bundles_drag_drop:
+      header:
+        weight: 6
+        enabled: false
+      header_default:
+        enabled: true
+        weight: 7
+      hero:
+        weight: 7
+        enabled: false
+      header_demo:
+        weight: 8
+        enabled: false
+      menu:
+        weight: 8
+        enabled: false
+      menu_item:
+        weight: 9
+        enabled: false
+      sections:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

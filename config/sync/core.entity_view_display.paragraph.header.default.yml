@@ -1,0 +1,24 @@
+uuid: 48fe0034-dc34-4967-a691-bea007c683df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header.field_header_types
+    - paragraphs.paragraphs_type.header
+  module:
+    - entity_reference_revisions
+id: paragraph.header.default
+targetEntityType: paragraph
+bundle: header
+mode: default
+content:
+  field_header_types:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

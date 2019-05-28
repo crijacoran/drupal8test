@@ -1,0 +1,61 @@
+uuid: 4a4c0b5b-7823-4ebe-9e0e-80aa649ab7fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_support_at_university
+    - paragraphs.paragraphs_type.support_university
+    - paragraphs.paragraphs_type.support_university_default
+  module:
+    - entity_reference_revisions
+id: paragraph.support_university.field_support_at_university
+field_name: field_support_at_university
+entity_type: paragraph
+bundle: support_university
+label: 'Support at University'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      support_university_default: support_university_default
+    target_bundles_drag_drop:
+      support_university:
+        weight: 12
+        enabled: false
+      faq_default:
+        weight: 13
+        enabled: false
+      faq_s:
+        weight: 14
+        enabled: false
+      header:
+        weight: 15
+        enabled: false
+      header_default:
+        weight: 16
+        enabled: false
+      hero:
+        weight: 17
+        enabled: false
+      hero_default:
+        weight: 18
+        enabled: false
+      item_label_content:
+        weight: 19
+        enabled: false
+      menu:
+        weight: 20
+        enabled: false
+      menu_item:
+        weight: 21
+        enabled: false
+      support_university_default:
+        enabled: true
+        weight: 22
+field_type: entity_reference_revisions

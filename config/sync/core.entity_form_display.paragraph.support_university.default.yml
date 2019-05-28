@@ -1,0 +1,29 @@
+uuid: 3639b691-23ca-4b47-a08c-a3118085f804
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.support_university.field_support_at_university
+    - paragraphs.paragraphs_type.support_university
+  module:
+    - paragraphs
+id: paragraph.support_university.default
+targetEntityType: paragraph
+bundle: support_university
+mode: default
+content:
+  field_support_at_university:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

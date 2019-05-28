@@ -1,0 +1,202 @@
+//  Navbar styling.
+
+$mobile: 'screen and (max-width: #{$screen-xs-max})';
+$tablet: 'screen and (min-width: #{$screen-sm-min})';
+$normal: 'screen and (min-width: #{$screen-md-min})';
+$wide: 'screen and (min-width: #{$screen-lg-min})';
+$grid-breakpoint: 'screen and (min-width: #{$grid-float-breakpoint})';
+
+body {
+  // Fix horizontal scrolling on iOS devices.
+  // https://www.drupal.org/node/1870076
+  position: relative;
+
+  &.navbar-is-static-top {
+    margin-top: 0;
+  }
+
+  &.navbar-is-fixed-top {
+    margin-top: ($navbar-height + ($grid-gutter-width / 2));
+  }
+
+  &.navbar-is-fixed-bottom {
+    padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
+  }
+
+  @media #{$tablet} {
+    margin-top: ($grid-gutter-width / 2);
+  }
+
+  @media #{$mobile} {
+    &.toolbar-vertical {
+
+      &.navbar-is-fixed-top,
+      &.navbar-is-fixed-bottom {
+        .toolbar-bar {
+          position: fixed;
+        }
+
+        header {
+          z-index: 500;
+        }
+      }
+
+      // Default toolbar fixed height value.
+      // @see core/modules/toolbar/css/toolbar.icons.theme.css@261
+      &.navbar-is-fixed-top {
+        header {
+          top: 39px;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  &.container {
+    @media #{$tablet} {
+      max-width: (($container-sm - $grid-gutter-width));
+    }
+
+    @media #{$normal} {
+      max-width: (($container-md - $grid-gutter-width));
+    }
+
+    @media #{$wide} {
+      max-width: (($container-lg - $grid-gutter-width));
+    }
+  }
+
+  // Branding.
+
+  .logo {
+    margin-right: -($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+
+    @media #{$grid-breakpoint} {
+      margin-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.ins-navbar {
+  &.navbar-default {
+    background-color: $ins-white;
+    border: 0;
+    border-radius: none;
+    height: 122px;
+    margin-bottom: 0;
+    position: relative;
+
+    &::after {
+      background-color: $ins-yellow;
+      bottom: -7px;
+      content: '';
+      display: block;
+      height: 7px;
+      left: 0;
+      position: absolute;
+      width: 50%;
+      z-index: 2;
+    }
+
+    @media #{$mobile} {
+      height: 73px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .container {
+      background-color: $ins-white;
+
+      .navbar-toggle {
+        border: 0;
+        margin-top: 42px;
+
+        @media #{$mobile} {
+          margin-top: 20px;
+        }
+
+        &:focus {
+          background-color: transparent;
+        }
+      }
+
+      @media (min-width: 991px) {
+        .navbar-header {
+          width: 50%;
+        }
+      }
+
+      .navbar-collapse {
+        border: 0;
+
+        .navbar-nav {
+          padding-top: 44px;
+
+          @media #{$mobile} {
+            padding-top: 0;
+          }
+
+          a {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            display: inline-block;
+            font-family: 'Roboto', sans-serif;
+            line-height: 30px;
+            padding: 0 12px;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+
+            @media #{$mobile} {
+              display: block;
+              text-align: left;
+            }
+
+            &.btn {
+              background-color: $ins-yellow;
+              font-size: 16px;
+              max-width: 118px;
+              min-width: 118px;
+
+              @media #{$mobile} {
+                margin-bottom: 9px;
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      .navbar-brand {
+        height: auto;
+        padding: 28px 15px;
+
+        .img-responsive {
+          max-height: 65px;
+          max-width: 473px;
+        }
+
+        @media #{$mobile} {
+          max-height: 73px;
+          padding: 21px 15px;
+          width: 80%;
+
+          div {
+            height: 31px;
+
+            .img-responsive {
+              max-height: 100%;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

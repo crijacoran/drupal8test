@@ -1,0 +1,11 @@
+uuid: 691e1fc3-7652-40ae-b037-07abba1919d3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Landing page'
+type: landing_page
+description: 'General content template for landing pages.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

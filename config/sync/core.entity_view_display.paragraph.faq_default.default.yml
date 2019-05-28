@@ -1,0 +1,35 @@
+uuid: d5e233db-b1e4-4a7a-842b-8891d2135e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_default.field_faqs_group
+    - field.field.paragraph.faq_default.field_id
+    - field.field.paragraph.faq_default.field_title
+    - paragraphs.paragraphs_type.faq_default
+  module:
+    - entity_reference_revisions
+id: paragraph.faq_default.default
+targetEntityType: paragraph
+bundle: faq_default
+mode: default
+content:
+  field_faqs_group:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_id: true

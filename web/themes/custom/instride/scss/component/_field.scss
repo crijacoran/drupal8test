@@ -1,0 +1,40 @@
+//  $file
+//  Visual styles for fields.
+
+.field--label {
+  font-weight: bold;
+}
+
+.field--label-inline {
+
+  .field--label,
+  .field--items {
+    float: left;
+    // LTR
+  }
+
+  .field--label,
+  >.field--item,
+  .field--items {
+    padding-right: .5em;
+  }
+
+  .field--label {
+    &::after {
+      content: ':';
+    }
+  }
+}
+
+[dir='rtl'] {
+  .field--label-inline {
+
+    .field--label,
+    .field--items {
+      float: right;
+      padding-left: .5em;
+      padding-right: 0;
+      // RTL
+    }
+  }
+}

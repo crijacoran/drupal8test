@@ -1,0 +1,19 @@
+uuid: 60181539-9fd6-4efc-a371-573daa8007dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.landing_page
+id: node.landing_page.field_description
+field_name: field_description
+entity_type: node
+bundle: landing_page
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

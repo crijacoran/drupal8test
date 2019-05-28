@@ -1,0 +1,55 @@
+uuid: bf7cfefe-863e-4d15-9ea0-8b9c838dffb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faqs_group
+    - paragraphs.paragraphs_type.faq_default
+    - paragraphs.paragraphs_type.item_label_content
+  module:
+    - entity_reference_revisions
+id: paragraph.faq_default.field_faqs_group
+field_name: field_faqs_group
+entity_type: paragraph
+bundle: faq_default
+label: 'FAQs group'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      item_label_content: item_label_content
+    target_bundles_drag_drop:
+      faq_default:
+        weight: 10
+        enabled: false
+      faq_s:
+        weight: 11
+        enabled: false
+      header:
+        weight: 12
+        enabled: false
+      header_default:
+        weight: 13
+        enabled: false
+      hero:
+        weight: 14
+        enabled: false
+      hero_default:
+        weight: 15
+        enabled: false
+      item_label_content:
+        enabled: true
+        weight: 16
+      menu:
+        weight: 17
+        enabled: false
+      menu_item:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

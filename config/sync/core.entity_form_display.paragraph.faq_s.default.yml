@@ -1,0 +1,29 @@
+uuid: d8794c79-7ae2-4e61-9f1a-f4fd370b70e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_s.field_faq_s
+    - paragraphs.paragraphs_type.faq_s
+  module:
+    - paragraphs
+id: paragraph.faq_s.default
+targetEntityType: paragraph
+bundle: faq_s
+mode: default
+content:
+  field_faq_s:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

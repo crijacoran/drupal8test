@@ -1,0 +1,64 @@
+uuid: 2b5c0631-6f94-4da1-8278-6374ac5b3124
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_support_items
+    - paragraphs.paragraphs_type.support_item
+    - paragraphs.paragraphs_type.support_university_default
+  module:
+    - entity_reference_revisions
+id: paragraph.support_university_default.field_support_items
+field_name: field_support_items
+entity_type: paragraph
+bundle: support_university_default
+label: 'Support items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      support_item: support_item
+    target_bundles_drag_drop:
+      support_item:
+        enabled: true
+        weight: 13
+      faq_default:
+        weight: 14
+        enabled: false
+      faq_s:
+        weight: 15
+        enabled: false
+      header:
+        weight: 16
+        enabled: false
+      header_default:
+        weight: 17
+        enabled: false
+      hero:
+        weight: 18
+        enabled: false
+      hero_default:
+        weight: 19
+        enabled: false
+      item_label_content:
+        weight: 20
+        enabled: false
+      menu:
+        weight: 21
+        enabled: false
+      menu_item:
+        weight: 22
+        enabled: false
+      support_university:
+        weight: 23
+        enabled: false
+      support_university_default:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

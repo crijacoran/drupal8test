@@ -1,0 +1,13 @@
+//  Node styling.
+
+.is-unpublished {
+  background-color: $ins-gray-custom;
+}
+
+.node-preview-container {
+  margin-top: -($grid-gutter-width / 2);
+}
+
+.node-preview-form-select {
+  padding: ($grid-gutter-width / 2);
+}

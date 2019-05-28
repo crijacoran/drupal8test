@@ -1,0 +1,9 @@
+uuid: 8f7dacce-d527-4318-a07b-0114d7b781a6
+langcode: en
+status: true
+dependencies: {  }
+id: menu_item
+label: 'Menu item'
+icon_uuid: null
+description: 'Menu item.'
+behavior_plugins: {  }
