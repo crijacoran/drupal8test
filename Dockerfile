@@ -52,7 +52,7 @@ RUN { \
 		echo 'opcache.enable_cli=1'; \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 
-WORKDIR /var/www/html
+WORKDIR /var/www/html/web
 
 # https://www.drupal.org/node/3060/release
 ENV DRUPAL_VERSION 8.7.2
