@@ -27,8 +27,6 @@ RUN a2enmod rewrite && mkdir /bootstrap
 ADD 000-default.conf /etc/apache2/sites-available/000-default.conf
 ADD start.sh /bootstrap/start.sh
 RUN chmod 755 /bootstrap/start.sh && chown -R www-data:www-data /var/www/html
-RUN rm -f /var/www/html/index.html
-ADD . /var/www/html/
 
 EXPOSE 80
 ENTRYPOINT ["/bootstrap/start.sh"]
